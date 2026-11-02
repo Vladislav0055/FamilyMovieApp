@@ -31,7 +31,7 @@ router.get("/profile", async(req,res)=>{
 router.post("/register",async (req,res)=>{
     const {username,password}=req.body;
     if(!username||!password){
-        return res.status(400).json({message:"Email and password are required"})  
+        return res.status(400).json({message:"Username and password are required"})  
     }
 
 const userExist= await findByUsername(username);
@@ -104,7 +104,8 @@ const match = await bcrypt.compare(password, user.passwordHash);
 
 const payload = {
       id: user.id,
-      role: user.role
+      role: user.role,
+      username:user.username,
     }
 const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '1d' });
 

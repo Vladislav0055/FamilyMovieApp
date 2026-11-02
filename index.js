@@ -16,7 +16,7 @@ app.use("/api/watchlist",authenticate, watchlistRoutes);
 
 
 app.get("/whoami",authenticate, (req, res) => {
-  res.json({user:req.user});
+  res.json(req.user);
 
 });
 

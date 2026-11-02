@@ -11,15 +11,23 @@ function authenticate(req,res,next){
   const token = authHeader.split(" ")[1];
 
   
-
-  const decoded=jwt.verify(token, process.env.SECRET_KEY);
+ try{
+ const decoded=jwt.verify(token, process.env.SECRET_KEY);
   if (!decoded) {
     return res.status(401).json({ message: "Invalid or expired token" });
+
   }
 
   req.user = decoded;
   next();
 
+ } catch(err){
+  res.json({message:"Invalid or expired token"})
+ }
+ 
+ 
+
+ 
 }
 
 export {authenticate}

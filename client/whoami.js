@@ -8,7 +8,7 @@ const options = {
   path: '/whoami', 
   headers: {
     "Content-Type":'application/json',
-   'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6InBhcmVudCIsImlhdCI6MTc5MzYzNzQ4OSwiZXhwIjoxNzkzNzIzODg5fQ.Pt4NZTnmyjGlj1BE1To8m4khluSwGC4wdtRpdCDVV_0',
+   'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InBhcmVudCIsInVzZXJuYW1lIjoibWFtYSIsImlhdCI6MTc5MzYzOTc1NywiZXhwIjoxNzkzNzI2MTU3fQ.GjCoQEHOZoIKLx03xjNMg6GmYEBR3vO9MfgPJH-rwz0',
   }
 };
 
@@ -16,7 +16,7 @@ const req = http.request(options, (res) => {
   let data = '';
   res.on('data', (chunk) => (data += chunk));
   res.on('end', () => {
-    console.log('Ответ:', data);
+    console.log('Ответ:', JSON.parse(data));
   });
 });
 
