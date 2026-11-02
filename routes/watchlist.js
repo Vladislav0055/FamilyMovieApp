@@ -3,13 +3,9 @@ import express from "express"
 const router=express.Router()
 
 
-router.post("/:userId", async (req, res) => {
- res.json("You have requested a movie")
+router.get("/:userId", async (req, res) => {
+ res.json({message:"You have requested a movie"})
 });
-
-
-
-
 
 
 

@@ -4,5 +4,11 @@
     "username": "mama",
     "role": "parent",
     "passwordHash": "$2b$10$Co7a5Hk4Mf2YgwUY12xb9ueVYNqzJpZwsIC7xZUgVdIPyIYC1wug6"
+  },
+  {
+    "id": 3,
+    "username": "vlad",
+    "role": "child",
+    "passwordHash": "$2b$10$uk9HdjRwA7Dz9qhzrzWOMuI9ziJva5owVf..fkB/UfZXbtCrUDo.i"
   }
 ]

@@ -38,7 +38,7 @@ req.on('error', (error) => {
 
 
 req.write(JSON.stringify({username:"vlad",password:"12345"}), 'utf8');
-req.end();
+req.en d();
 `
 
 

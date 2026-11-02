@@ -9,7 +9,7 @@ const options = {
   path: '/api/auth/logout', 
   headers: { 
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InBhcmVudCIsInVzZXJuYW1lIjoibWFtYSIsImlhdCI6MTc5MzYzOTc1NywiZXhwIjoxNzkzNzI2MTU3fQ.GjCoQEHOZoIKLx03xjNMg6GmYEBR3vO9MfgPJH-rwz0',
+    'Authorization': 'Bearer newToken',
   }
 };
 

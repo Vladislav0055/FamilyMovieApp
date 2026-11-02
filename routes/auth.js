@@ -11,21 +11,10 @@ import { needToLogin } from "../middleware/needToLogin.js";
 
 
 
-
-
-
-
-
-
-
-
 const router=express.Router()
 
 
-router.get("/profile", async(req,res)=>{
-        res.json("hello friend")
-        
-})
+
 //REGISTRATION-----------------------------------------------------------------------------------------------------
 
 router.post("/register",async (req,res)=>{
