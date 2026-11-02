@@ -4,7 +4,7 @@ import{fileURLToPath} from "url";
 
 
 const __dirname=dirname(fileURLToPath(import.meta.url));
-const tokenedQueries=["../client/client.js","../client/login.js","../client/logout.js","../client/watchlist.js"];
+const tokenedQueries=["../client/client.js","../client/login.js","../client/logout.js","../client/watchlist.js","../client/whoami.js"];
 
 
    export async function setTokens(token){

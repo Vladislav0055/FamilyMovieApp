@@ -15,6 +15,10 @@ app.use("/api/auth",authRouter)
 app.use("/api/watchlist",authenticate, watchlistRoutes);
 
 
+app.get("/whoami",authenticate, (req, res) => {
+  res.json({user:req.user});
+
+});
 
 app.get("/", (req, res) => {
   res.json({message:"Family Movie Watchlist API"});
@@ -25,6 +29,11 @@ app.post("/hello/:userId",authenticate,authorizeModification,(req,res)=>{
   res.json(req.user)
   console.log(req.body)
 })
+
+
+
+
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}...`);

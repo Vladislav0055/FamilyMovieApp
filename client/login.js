@@ -9,7 +9,7 @@ const options = {
   port:3000,
   path: '/api/auth/login', 
   headers: { 
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InBhcmVudCIsImlhdCI6MTc5MzYzNDY5NywiZXhwIjoxNzkzNzIxMDk3fQ.o08-AIUKhQUrD5HL1SXuHHXiZSYEl5l_SBll4t07t8w',
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6InBhcmVudCIsImlhdCI6MTc5MzYzNzQ4OSwiZXhwIjoxNzkzNzIzODg5fQ.Pt4NZTnmyjGlj1BE1To8m4khluSwGC4wdtRpdCDVV_0',
     'Content-Type': 'application/json'
   }
 };
@@ -37,5 +37,5 @@ req.on('error', (error) => {
 
 
 
-req.write(JSON.stringify({username:"vlad",password:"12345"}), 'utf8');
+req.write(JSON.stringify({username:"mama",password:"123456"}), 'utf8');
 req.end();
