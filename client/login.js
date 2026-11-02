@@ -9,7 +9,7 @@ const options = {
   port:3000,
   path: '/api/auth/login', 
   headers: { 
-    'Authorization': 'Bearer newToken',
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InBhcmVudCIsImlhdCI6MTc5MzYzNDY5NywiZXhwIjoxNzkzNzIxMDk3fQ.o08-AIUKhQUrD5HL1SXuHHXiZSYEl5l_SBll4t07t8w',
     'Content-Type': 'application/json'
   }
 };

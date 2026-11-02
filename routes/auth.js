@@ -119,7 +119,7 @@ router.post("/logout",(req,res)=>{
    
     const authHeader=req.headers.authorization;
     const token= authHeader.split(" ")[1]
-    blacklistToken(token);
+    //blacklistToken(token);
     res.json({message:"Logged out successfully"})
 
 

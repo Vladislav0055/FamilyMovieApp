@@ -1,5 +1,5 @@
 import http from "http";
-
+import { deleteTokens} from "../utils/token_insert.js";
 
 
 const options = {
@@ -9,7 +9,7 @@ const options = {
   path: '/api/auth/logout', 
   headers: { 
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer newToken',
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InBhcmVudCIsImlhdCI6MTc5MzYzNDY5NywiZXhwIjoxNzkzNzIxMDk3fQ.o08-AIUKhQUrD5HL1SXuHHXiZSYEl5l_SBll4t07t8w',
   }
 };
 
@@ -20,7 +20,9 @@ const req = http.request(options, (res) => {
 
    
       console.log('Ответ:', JSON.parse(data));
-   
+
+
+       deleteTokens()
    
   });
 });

@@ -18,35 +18,21 @@ const tokenedQueries=["../client/client.js","../client/login.js","../client/logo
     }
 }
 
-/*     export async function setTokens(token){
-   
+
+
+   export async function deleteTokens(){
+    for(let url of tokenedQueries){
         
-       
-        const data = await readFile(join(__dirname,"../client/client.js"), "utf8");
-
-        const newData = data.replace("newToken", token);
-        await writeFile(join(__dirname,"../client/client.js"), newData);
+        const path = join(__dirname, url);
+        const data = await readFile(path, "utf8");
+        const newData = data.replace(/[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/, "newToken");
+        await writeFile(path, newData);
     
-   
-} */
-
-
- 
-
-//------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-export async function removeToken(){
-    const data=await readFile(DB_PATH,"utf8");
-    const newdata=JSON.stringify(data).replace("newToken",token)
-    await writeFile(DB_PATH,JSON.parse(newdata,null,2));
+    }
 }
+
+
+
 
 
 
