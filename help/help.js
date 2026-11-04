@@ -1,47 +1,22 @@
-const text=`import http from "http";
-import { setTokens} from "../utils/token_insert.js";
+/* function add(a,b){
+  const c=a+b;
+  return c
+}
+
+try{
+console.log(add(a,2))
+} catch{
+  console.log("something went wrong")
+}
+ */
 
 
+/* 
+import jwt from "jsonwebtoken"
+const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImNoaWxkIiwidXNlcm5hbWUiOiJwYXBhIiwiaWF0IjoxNzkzNzkwNjQyLCJleHAiOjE3OTM4NzcwNDJ9.nTU7X6qp01rTiNULYLWTzSYHFweczKZJ-QO71Ts7ODQ"
+const decoded=jwt.verify(token, "alksdjfladADSFADF!#$!@$#645656");
+console.log(decoded) */
 
-const options = {
-  method: 'POST',
-  hostname: 'localhost',
-  port:3000,
-  path: '/api/auth/login', 
-  headers: { 
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InBhcmVudCIsImlhdCI6MTc5MzYzNDY5NywiZXhwIjoxNzkzNzIxMDk3fQ.o08-AIUKhQUrD5HL1SXuHHXiZSYEl5l_SBll4t07t8w',
-    'Content-Type': 'application/json'
-  }
-};
-
-const req = http.request(options, (res) => {
-  let data = '';
-  res.on('data', (chunk) => (data += chunk));
-  res.on('end', async () => {
-
-    
-    const parsedData=JSON.parse(data);
-    const {token}=parsedData;
-    console.log(parsedData)
-    setTokens(token)
-
-
-
-  });
-});
-
-
-req.on('error', (error) => {
-  console.error('Ошибка:', error);
-});
-
-
-
-req.write(JSON.stringify({username:"vlad",password:"12345"}), 'utf8');
-req.en d();
-`
-
-
-
-const value=/[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/.test(text);
-console.log(value)
+if(null===false){
+  console.log("hello")
+}

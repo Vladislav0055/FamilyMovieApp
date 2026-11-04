@@ -2,19 +2,12 @@ import fs, { watch } from "fs";
 import path from "path";
 import users from "../data/users.json" with { type: "json" };
 
- export const WATCHLISTS_PATH = path.join(
-  import.meta.dirname,
-  "../data/watchlist.json",
-);
-
-
+ export const WATCHLISTS_PATH = path.join(import.meta.dirname,"../data/watchlist.json",);
 
 
 export function readWatchlists() {
   return JSON.parse(fs.readFileSync(WATCHLISTS_PATH, "utf-8"));
 }
-
-
 
 
 export function writeWatchlists(watchlists) {
@@ -23,9 +16,6 @@ export function writeWatchlists(watchlists) {
 
 
 
-export function findByUsername(username) {
-  return users.find((u) => u.username === username) || null;
-}
 
 export function findById(id) {
   return users.find((u) => u.id === id) || null;
@@ -41,10 +31,14 @@ export function getWatchlist(userId) {
   return watchlists[userId] || [];
 }
 
+
+
+
+
+
+
 export function addMovie(userId, movieData) {
-  if (!findById(userId)) {
-    return null;
-  }
+ 
 
   const watchlists = readWatchlists();
   const list = watchlists[userId] || [];
@@ -64,13 +58,11 @@ export function addMovie(userId, movieData) {
   watchlists[userId] = list;
   writeWatchlists(watchlists);
 
-  return movie;
+  
 }
 
 export function updateMovie(userId, movieId, updates) {
-  if (!findById(userId)) {
-    return null;
-  }
+ 
 
   const watchlists = readWatchlists();
   const list = watchlists[userId] || [];
@@ -80,17 +72,18 @@ export function updateMovie(userId, movieId, updates) {
     return null;
   }
 
-  list[index] = { ...list[index], ...updates, id: movieId };
+  list[index] = { ...list[index], ...updates};
   watchlists[userId] = list;
   writeWatchlists(watchlists);
 
-  return list[index];
+  
 }
 
+
+
+
 export function deleteMovie(userId, movieId) {
-  if (!findById(userId)) {
-    return null;
-  }
+ 
   const watchlists = readWatchlists();
   const list = watchlists[userId] || [];
   const index = list.findIndex((m) => m.id === movieId);
@@ -102,6 +95,7 @@ export function deleteMovie(userId, movieId) {
   list.splice(index, 1);
   writeWatchlists(watchlists);
 
-  return true;
+
 }
+
 

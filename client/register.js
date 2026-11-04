@@ -29,5 +29,5 @@ req.on('error', (error) => {
 
 
 
-req.write(JSON.stringify({username:"vlad",password:"54321",role:"child"}), 'utf8');
+req.write(JSON.stringify({username:"papa",password:"3",role:"child"}), 'utf8');
 req.end();

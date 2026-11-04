@@ -5,7 +5,7 @@ const options = {
   method: 'GET',
   hostname: 'localhost',
   port:3000,
-  path: '/api/watchlist/4', 
+  path: '/api/watchlist', 
   headers: {
     'Authorization': 'Bearer newToken',
     'Content-Type': 'application/json'

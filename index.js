@@ -12,7 +12,7 @@ const app = express();
 app.use(helmet());
 app.use(express.json());
 app.use("/api/auth",authRouter)
-app.use("/api/watchlist",authenticate,authorizeModification, watchlistRoutes);
+app.use("/api/watchlist",authenticate, watchlistRoutes);
 
 
 app.get("/whoami",authenticate, (req, res) => {

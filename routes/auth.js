@@ -1,11 +1,11 @@
 import express from "express"
 import bcrypt from "bcryptjs";
-import { findByUsername, generateId,getUsers,saveUsers} from "../utils/db_users.js";
+import { findByUsername, generateId,saveUsers} from "../utils/db_users.js";
 import {blacklistToken} from "../utils/token_blacklist.js";
 
 import jwt from "jsonwebtoken";
 import {randomUUID} from "crypto";
-
+import users from "../data/users.json" with { type: "json" };
 import { authenticate } from "../middleware/authenticate.js";
 import { needToLogin } from "../middleware/needToLogin.js";
 
@@ -43,7 +43,7 @@ const user={
     passwordHash:passwordHash
   }
 
-const users= await getUsers();
+/* const users= await getUsers(); */
 users.push(user);
 await saveUsers(users);
 res.json("You successfully registered")
@@ -109,7 +109,7 @@ router.post("/logout",(req,res)=>{
    
     const authHeader=req.headers.authorization;
     const token= authHeader.split(" ")[1]
-    //blacklistToken(token);
+    blacklistToken(token);
     res.json({message:"Logged out successfully"})
 
 

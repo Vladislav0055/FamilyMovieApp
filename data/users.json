@@ -1,14 +1,20 @@
 [
   {
+    "id": 1,
+    "username": "vlad",
+    "role": "child",
+    "passwordHash": "$2b$10$1lps/OScpuRuUQk0zhD0Kep3mrJdsY5sy3wCU7bFCB5gO4CZeOa4W"
+  },
+  {
     "id": 2,
     "username": "mama",
-    "role": "parent",
-    "passwordHash": "$2b$10$Co7a5Hk4Mf2YgwUY12xb9ueVYNqzJpZwsIC7xZUgVdIPyIYC1wug6"
+    "role": "child",
+    "passwordHash": "$2b$10$YvNYxNit42Ji9jL82/fg4OQt9HEVH2j.y2qb43Ol93pLgC6nLLTki"
   },
   {
     "id": 3,
-    "username": "vlad",
+    "username": "papa",
     "role": "child",
-    "passwordHash": "$2b$10$uk9HdjRwA7Dz9qhzrzWOMuI9ziJva5owVf..fkB/UfZXbtCrUDo.i"
+    "passwordHash": "$2b$10$2IzuXPnge9Xs1Jtm6fZN3u.ag.LHCwY53YLZHx81Z37VnT6WHey5i"
   }
 ]

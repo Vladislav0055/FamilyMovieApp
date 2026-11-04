@@ -1,10 +1,14 @@
+/* This file adds tokens to requests from client 
+ folder as if it is browser who sets tokens for every request header. */
+
+
 import{readFile,writeFile} from "fs/promises";
 import{join,dirname} from "path";
 import{fileURLToPath} from "url";
 
 
 const __dirname=dirname(fileURLToPath(import.meta.url));
-const tokenedQueries=["../client/login.js","../client/logout.js","../client/watchlist.js","../client/whoami.js"];
+const tokenedQueries=["../client/watchlist_delete_m.js","../client/watchlist_update_m.js","../client/login.js","../client/logout.js","../client/watchlist.js","../client/whoami.js","../client/watchlist_add_m.js"];
 
 
    export async function setTokens(token){

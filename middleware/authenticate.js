@@ -1,6 +1,6 @@
 
 import jwt from "jsonwebtoken"
-
+import { isBlacklisted } from "../utils/token_blacklist.js";
 
 function authenticate(req,res,next){
     const authHeader=req.headers.authorization;
@@ -9,6 +9,13 @@ function authenticate(req,res,next){
     }
 
   const token = authHeader.split(" ")[1];
+
+
+ if (isBlacklisted(token)) {
+    return res
+      .status(401)
+      .json({ message: "Token has been invalidated. Log in again." });
+  }
 
   
  try{

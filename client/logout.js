@@ -31,5 +31,5 @@ req.on('error', (error) => {
   console.error('Ошибка:', error);
 });
 
-req.write(JSON.stringify({username:"friend",password:"12345"}), 'utf8');
+
 req.end();
