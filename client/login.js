@@ -1,3 +1,6 @@
+//Request for login. Execute this file with username and pass registered already
+//and found in data/users.json. After that every request js file from client folder
+//  gets headers with token.
 import http from "http";
 import { setTokens} from "../utils/token_insert.js";
 

@@ -1,3 +1,6 @@
+
+// Request for log out. Token adds in black list at server and every request js
+//file lose headers token.
 import http from "http";
 import { deleteTokens} from "../utils/token_insert.js";
 

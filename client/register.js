@@ -1,3 +1,5 @@
+//For registering users. New user appears at data/users.json. Fill username,
+//password and role down the request in the body part.
 import http from "http";
 
 

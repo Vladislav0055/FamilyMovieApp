@@ -1,3 +1,5 @@
+//Adds a movie for logged in person. In data/watchlist.json. Fill some data
+// at the bottom of the request. Title and genre.
 import http from "http";
 
 
@@ -23,5 +25,5 @@ const req = http.request(options, (res) => {
 req.on('error', (error) => {
   console.error('Ошибка:', error);
 });
-req.write(JSON.stringify({title:"film about nature",genre:"animals"}), 'utf8');
+req.write(JSON.stringify({title:"New",genre:"realLifeMovie"}), 'utf8');
 req.end();

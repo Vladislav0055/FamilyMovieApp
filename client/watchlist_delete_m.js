@@ -1,3 +1,4 @@
+//Delete movie.
 import http from "http";
 
 
@@ -5,7 +6,7 @@ const options = {
   method: 'DELETE',
   hostname: 'localhost',
   port:3000,
-  path: '/api/watchlist/deletemovie/1', 
+  path: '/api/watchlist/deletemovie/2', 
   headers: {
     'Authorization': 'Bearer newToken',
     'Content-Type': 'application/json'

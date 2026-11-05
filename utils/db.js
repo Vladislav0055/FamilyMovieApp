@@ -1,4 +1,4 @@
-import fs, { watch } from "fs";
+import fs from "fs";
 import path from "path";
 import users from "../data/users.json" with { type: "json" };
 

@@ -1,4 +1,4 @@
-
+// Authenticate with checking headers, blacklist of tokens,decoding token...
 import jwt from "jsonwebtoken"
 import { isBlacklisted } from "../utils/token_blacklist.js";
 

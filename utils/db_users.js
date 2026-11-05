@@ -1,15 +1,11 @@
-import{readFile,writeFile} from "fs/promises";
+import{writeFile} from "fs/promises";
 import{join,dirname} from "path";
 import{fileURLToPath} from "url";
 import users from "../data/users.json" with { type: "json" };
 const __dirname=dirname(fileURLToPath(import.meta.url));
 const DB_PATH=join(__dirname,"../data/users.json");
 
-/* 
-export async function getUsers(){
-    const data=await readFile(DB_PATH,"utf8");
-    return JSON.parse(data);
-} */
+
 
 export async function saveUsers(users){
     await writeFile(DB_PATH,JSON.stringify(users,null,2));

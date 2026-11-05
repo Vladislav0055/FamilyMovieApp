@@ -1,3 +1,4 @@
+//Check if user already logged in.
 
 import jwt from "jsonwebtoken"
 

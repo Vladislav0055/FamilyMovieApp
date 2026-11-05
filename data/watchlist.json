@@ -11,13 +11,25 @@
       "title": "family movie",
       "genre": "drama",
       "watched": false
+    },
+    {
+      "id": 3,
+      "title": "Rzhev",
+      "genre": "warmovie",
+      "watched": false
     }
   ],
   "2": [
     {
-      "id": 2,
-      "title": "film about nature",
-      "genre": "animals",
+      "id": 3,
+      "title": "about cats",
+      "genre": "drama",
+      "watched": false
+    },
+    {
+      "id": 4,
+      "title": "New",
+      "genre": "realLifeMovie",
       "watched": false
     }
   ],
